@@ -1,1 +1,7 @@
-h1 { font-family: "Helvetica"; }
+body { font-family: "Inconsolata"; cursor: default; }
+
+h1 { font-size: 100px; }
+h2 { font-size: 64px;  }
+h3 { font-size: 48px;  }
+h4 { font-size: 32px;  }
+h5 { font-size: 24px;  }
