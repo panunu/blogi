@@ -9,10 +9,11 @@ $app->get('/', function() {
 use dflydev\markdown\MarkdownParser;
 
 $app->get('/{topic}/', function($topic) use($app) {
-    $parser = new MarkdownParser();
+    $parser  = new MarkdownParser();
+    $content = @file_get_contents(__DIR__.'/../data/'. $topic . '.md'); // TODO: Security.
 
     return $app['twig']->render('view.html.twig', array(
-        'story' => $parser->transform("#Hello\nPlease, have a read.\n##Moshimoshi")
+        'story' => $parser->transform($content ?: "#404")
     ));
 });
 
