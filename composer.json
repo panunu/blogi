@@ -1,6 +1,7 @@
 {
     "minimum-stability": "dev",
     "require": {
-        "silex/silex": "1.0.*"
+        "silex/silex": "1.0.*",
+        "dflydev/markdown": "1.0.*"
     }
 }
