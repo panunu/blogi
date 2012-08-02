@@ -1,5 +1,5 @@
 {
-    "hash": "29be6c7c230675fb3a7820886106d4e4",
+    "hash": "01109b9dd2bf652bdda1921bc8fa79fb",
     "packages": [
         {
             "package": "dflydev/markdown",
@@ -78,6 +78,18 @@
             "package": "symfony/routing",
             "version": "dev-master",
             "source-reference": "30f54eb917f64d7735ba0b6a230e9620da95be9b"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "alias-pretty-version": "1.9.x-dev",
+            "alias-version": "1.9.9999999.9999999-dev"
+        },
+        {
+            "package": "twig/twig",
+            "version": "dev-master",
+            "source-reference": "51c866f415bbee670cd9ba13591307bce8dabdca",
+            "commit-date": "1343464333"
         }
     ],
     "packages-dev": null,

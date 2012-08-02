@@ -2,16 +2,18 @@
 
 $app = require_once __DIR__.'/bootstrap.php';
 
-use dflydev\markdown\MarkdownParser;
-
 $app->get('/', function() {
     return '?';
 });
 
+use dflydev\markdown\MarkdownParser;
+
 $app->get('/{topic}/', function($topic) use($app) {
     $parser = new MarkdownParser();
 
-    return $parser->transform("#Hello!");
+    return $app['twig']->render('view.html.twig', array(
+        'story' => $parser->transform("#Hello")
+    ));
 });
 
 return $app;
