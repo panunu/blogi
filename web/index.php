@@ -4,7 +4,11 @@ require_once __DIR__.'/../vendor/autoload.php';
 
 $app = new Silex\Application();
 
-$app->get('/hello', function() {
+$app->get('/', function() {
+    return '?';
+});
+
+$app->get('/{topic}/', function($topic) use($app) {
     return 'Hello!';
 });
 
