@@ -1,7 +1,19 @@
-body { font-family: "Inconsolata"; cursor: default; }
+body {
+    text-align:  justify;
+    font-family: "Inconsolata";
+    font-size:   20px;
+    line-height: 32px;
+    color:       #555;
+
+    background-color: #efefef;
+
+    cursor: default;
+}
+
+a { color: inherit; }
 
 h1 { font-size: 100px; }
-h2 { font-size: 64px;  }
-h3 { font-size: 48px;  }
-h4 { font-size: 32px;  }
-h5 { font-size: 24px;  }
+h2 { font-size:  64px; }
+h3 { font-size:  48px; }
+h4 { font-size:  32px; }
+h5 { font-size:  24px; }
