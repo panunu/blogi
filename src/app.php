@@ -15,9 +15,11 @@ use dflydev\markdown\MarkdownParser;
 function render($filename, $app) {
     $parser  = new MarkdownParser();
     $content = @file_get_contents(__DIR__.'/../data/'.$filename.'.md'); // TODO: Security.
+    $title   = @file_get_contents(__DIR__.'/../data/title.md');
 
     return $app['twig']->render('view.html.twig', array(
-        'story' => $parser->transform($content ?: "#404")
+        'story' => $parser->transform($content ?: "#404"),
+        'title' => $title
     ));
 }
 
