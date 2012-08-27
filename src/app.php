@@ -12,15 +12,19 @@ $app->get('/{topic}/', function($topic) use($app) {
 
 use dflydev\markdown\MarkdownParser;
 
-function render($filename, $app) {
+function render($slug, $app) {
     $parser  = new MarkdownParser();
-    $content = @file_get_contents(__DIR__.'/../data/'.$filename.'.md'); // TODO: Security.
+    $content = @file_get_contents(__DIR__.'/../data/'. clean($slug) .'.md');
     $title   = @file_get_contents(__DIR__.'/../data/title.md');
 
     return $app['twig']->render('view.html.twig', array(
         'story' => $parser->transform($content ?: "#404"),
         'title' => $title
     ));
+}
+
+function clean($slug) {
+    return preg_replace('~[^\\pL\d]+~u', '-', $slug);
 }
 
 return $app;
